@@ -14,5 +14,5 @@ window.MAE_CONFIG = {
   modelTransport: "glb",
   /* Microsoft Clarity project ID (clarity.microsoft.com → Settings → Overview).
      "" turns analytics off. Never loads on localhost or from disk. */
-  clarityId: ""
+     clarityId: "za1q6gogot"
 };
