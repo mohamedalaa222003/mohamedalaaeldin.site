@@ -1,0 +1,18 @@
+# Netlify / Cloudflare Pages cache + security headers (other hosts: see README).
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+/assets/models/*.glb
+  Content-Type: model/gltf-binary
+  Cache-Control: public, max-age=604800
+/assets/*
+  Cache-Control: public, max-age=604800
+/js/*
+  Cache-Control: public, max-age=3600
+/css/*
+  Cache-Control: public, max-age=3600
+/config.js
+  Cache-Control: no-cache

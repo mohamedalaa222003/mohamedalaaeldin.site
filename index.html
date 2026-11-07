@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MAE Engineering — Mohamed Alaa Eldin · System Improvement, Mechanical Design &amp; Industrial Innovation</title>
+<meta name="description" content="Mohamed Alaa Eldin — mechanical R&amp;D and design engineer. Machine design, jigs and tooling, DFM/DFA, FMEA and Lean Six Sigma, with interactive 3D case studies and working engineering calculators." />
+<meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#0b0c13" media="(prefers-color-scheme: dark)" />
+<meta name="color-scheme" content="light dark" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="MAE Engineering — Mohamed Alaa Eldin" />
+<meta property="og:description" content="Mechanical design, product development, DFM/DFA and Lean Six Sigma — with interactive 3D case studies." />
+<meta property="og:image" content="https://mohamedalaaeldin.site/assets/og.png" />
+<meta property="og:url" content="https://mohamedalaaeldin.site/" />
+<link rel="canonical" href="https://mohamedalaaeldin.site/" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<script>
+  /* Theme before first paint: saved choice → OS preference → light. Key: "mae-theme". */
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("mae-theme"); } catch (e) {}
+    if (t !== "light" && t !== "dark") t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.dataset.theme = t;
+    document.documentElement.style.colorScheme = t;
+    /* Font preloads only over HTTP(S) — browsers block font requests from file:// pages. */
+    if (location.protocol !== "file:") ["bricolage-grotesque", "figtree"].forEach(function (f) {
+      var l = document.createElement("link"); l.rel = "preload"; l.as = "font"; l.type = "font/woff2"; l.crossOrigin = "anonymous";
+      l.href = "fonts/" + f + "-latin-wght-normal.woff2"; document.head.appendChild(l);
+    });
+  })();
+</script>
+<link rel="stylesheet" href="css/main.css" />
+</head>
+<body class="min-h-dvh">
+<header id="site-header" class="fixed inset-x-0 top-0 z-50"></header>
+<main id="main" tabindex="-1"><div id="app"></div></main>
+<footer id="site-footer" class="relative overflow-hidden bg-graphite text-paper"></footer>
+
+<dialog id="lightbox" class="m-0 h-[100dvh] max-h-none w-screen max-w-none bg-graphite/95 p-0 text-paper backdrop:bg-graphite/80" aria-label="Image viewer">
+  <div class="flex h-full flex-col">
+    <div class="flex items-center justify-between px-5 py-4"><p id="lb-count" class="label text-steel"></p>
+      <button type="button" id="lb-close" aria-label="Close image viewer" class="grid size-11 place-items-center hover:text-signal"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
+    <div class="relative min-h-0 flex-1"><img id="lb-img" alt="" class="absolute inset-0 h-full w-full object-contain" /></div>
+    <div class="flex items-center justify-between gap-4 px-5 py-4">
+      <button type="button" id="lb-prev" aria-label="Previous image" class="grid size-11 place-items-center border border-paper/25 hover:border-signal">‹</button>
+      <p id="lb-cap" class="text-center text-sm text-paper/80"></p>
+      <button type="button" id="lb-next" aria-label="Next image" class="grid size-11 place-items-center border border-paper/25 hover:border-signal">›</button>
+    </div>
+  </div>
+</dialog>
+
+<noscript><p style="padding:6rem 1.5rem;font-family:sans-serif">This portfolio needs JavaScript. Contact: mohamed___alaa@outlook.com</p></noscript>
+
+<script src="config.js"></script>
+<script>
+  /* Microsoft Clarity — loads only on the live site when MAE_CONFIG.clarityId is set. */
+  (function () {
+    var id = window.MAE_CONFIG && window.MAE_CONFIG.clarityId;
+    if (!id || !/^https?:$/.test(location.protocol) || /^(localhost|127\.)/.test(location.hostname)) return;
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",id);
+  })();
+</script>
+<script src="js/app.js"></script>
+</body>
+</html>
